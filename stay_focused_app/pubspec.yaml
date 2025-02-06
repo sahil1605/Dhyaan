@@ -30,12 +30,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  timezone: ^0.9.1 # For handling time zones
+  timezone: ^0.9.0 # For handling time zones
   provider: ^6.0.0  # For state management
   shared_preferences: ^2.0.6  # For local storage
   intl: ^0.17.0  # For date formatting
   permission_handler: ^10.0.0  # For requesting permissions
-  flutter_local_notifications: ^9.5.3  # For notifications
+  flutter_local_notifications: ^15.1.0+1  # For notifications
   charts_flutter: ^0.12.0  # For displaying charts
   firebase_core: ^2.0.0  # For Firebase integration (optional)
   firebase_analytics: ^10.0.0  # For analytics (optional)
