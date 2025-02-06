@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
-import 'screens/settings_screen.dart';
-import 'screens/statistics_screen.dart';
-import 'services/notification__service.dart';
+import '../screens/home_screen.dart';
+import '../screens/settings_screen.dart';
+import '../screens/statistics_screen.dart';
+import '../services/notification__service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
