@@ -1,6 +1,7 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tz;
+import 'dart:io' show Platform;
 
 class NotificationService {
   // Singleton instance
@@ -70,21 +71,32 @@ class NotificationService {
     const NotificationDetails platformChannelSpecifics =
         NotificationDetails(android: androidPlatformChannelSpecifics);
 
-    // Convert DateTime to TZDateTime
-    final tz.TZDateTime tzScheduledTime =
-        tz.TZDateTime.from(scheduledTime, tz.local);
+    if (Platform.isAndroid) {
+      // Use zonedSchedule() for Android with androidScheduleMode
+      final tz.TZDateTime tzScheduledTime =
+          tz.TZDateTime.from(scheduledTime, tz.local);
 
-    await _flutterLocalNotificationsPlugin.zonedSchedule(
-      0, // Notification ID
-      title, // Notification Title
-      body, // Notification Body
-      tzScheduledTime, // Scheduled Time (converted to TZDateTime)
-      platformChannelSpecifics,
-      androidAllowWhileIdle:
-          true, // Show notification even when the device is idle
-      uiLocalNotificationDateInterpretation:
-          UILocalNotificationDateInterpretation.absoluteTime,
-    );
+      await _flutterLocalNotificationsPlugin.zonedSchedule(
+        0, // Notification ID
+        title, // Notification Title
+        body, // Notification Body
+        tzScheduledTime, // Scheduled Time (converted to TZDateTime)
+        platformChannelSpecifics,
+        androidScheduleMode:
+            AndroidScheduleMode.exactAllowWhileIdle, // Add this line
+        uiLocalNotificationDateInterpretation:
+            UILocalNotificationDateInterpretation.absoluteTime,
+      );
+    } else if (Platform.isIOS) {
+      // Use schedule() for iOS
+      // await _flutterLocalNotificationsPlugin.schedule(
+      //   0, // Notification ID
+      //   title, // Notification Title
+      //   body, // Notification Body
+      //   scheduledTime, // Scheduled Time (regular DateTime)
+      //   platformChannelSpecifics,
+      // );
+    }
   }
 
   // Cancel all notifications
