@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import '../screens/home_screen.dart';
 import '../screens/settings_screen.dart';
 import '../screens/statistics_screen.dart';
-import '../services/notification__service.dart';
+// import '../services/notification__service.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+  // WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize the NotificationService
-  final NotificationService notificationService = NotificationService();
-  await notificationService.initialize();
+  // // Initialize the NotificationService
+  // final NotificationService notificationService = NotificationService();
+  // await notificationService.initialize();
 
   runApp(MyApp());
 }
