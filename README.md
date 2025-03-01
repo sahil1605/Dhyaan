@@ -21,17 +21,17 @@ Get gentle reminders to meditate daily. No bossy notifications, just friendly nu
 
 Installation Guide
 ### Clone this repository:
-1 git clone https://github.com/sahilbitsp/dhyaan.git
+git clone https://github.com/sahilbitsp/dhyaan.git
+
 Open the project in Android Studio or VS Code.
 
 ### Install dependencies:
-bash Copy
-1 flutter pub get
+ flutter pub get
 
 ### Run the app:
-1 flutter run
-Contributing
-
+ flutter run
+ 
+## Contributing
 We'd love to have you contribute to Dhyaan! If you find any bugs or have ideas to improve the app, feel free to open an issue or submit a pull request.
 
 ## Some areas where you can help:
@@ -39,7 +39,7 @@ We'd love to have you contribute to Dhyaan! If you find any bugs or have ideas t
 ### Improving the UI/UX.
 ### Fixing bugs related to app blocking or notifications.
 
-Contact Us
+## Contact Us
 If you have any questions, suggestions, or just want to say hi, feel free to reach out:
 
 Email: sahilbitsp@gmail.com
