@@ -43,9 +43,3 @@ We'd love to have you contribute to Dhyaan! If you find any bugs or have ideas t
 If you have any questions, suggestions, or just want to say hi, feel free to reach out:
 
 Email: sahilbitsp@gmail.com
-Instagram: @dhyaan_app
-Twitter: @dhyaan_app
-License
-This project is licensed under the MIT License. Do whatever you want with it, but please give credit if you use our code. 😊
-
-Thank you for choosing Dhyaan! Together, let's make meditation a part of everyday life. 🙏
